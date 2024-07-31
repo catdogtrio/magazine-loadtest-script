@@ -1,7 +1,5 @@
 package configs
 
-import java.nio.charset.StandardCharsets
-import java.util.Base64
 
 /** Static parameters */
 object Parameters {

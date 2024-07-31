@@ -2,16 +2,15 @@ package simulations
 
 import configs.Parameters.baseUrl
 import configs.UsersGeneration.generate
-import io.gatling.core.Predef.{Simulation, constantConcurrentUsers, rampConcurrentUsers}
+import io.gatling.core.Predef.{Simulation, _}
 import io.gatling.http.Predef.http
 import io.gatling.http.protocol._
-import io.gatling.core.Predef._
 import scenarios.RegressScenario.RegressScenario
 
 import scala.concurrent.duration.DurationInt
 
 /** Represents a simulation of loadtest */
-class RegressSimulation extends Simulation {
+class DebugSimulation extends Simulation {
 
   val httpProtocol: HttpProtocolBuilder = http
     .baseUrl(baseUrl)
@@ -28,7 +27,7 @@ class RegressSimulation extends Simulation {
 
   setUp(
     RegressScenario.inject(
-      constantUsersPerSec(1/60) during(10.minutes),
+      atOnceUsers(1)
     ).protocols(httpProtocol),
   ).maxDuration(10.minutes)
 
