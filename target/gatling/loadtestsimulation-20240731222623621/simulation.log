@@ -1,0 +1,222 @@
+RUN	simulations.LoadtestSimulation	loadtestsimulation	1722464783621	 	3.6.1
+USER	RegressScenario	START	1722464786316
+REQUEST	Login into magazine as author	GET /en/user/login	1722464786388	1722464786510	OK	 
+REQUEST	Login into magazine as author	POST /en/user/login	1722464786543	1722464786868	OK	 
+REQUEST	Login into magazine as author	GET /en/user/{userId}	1722464786880	1722464787384	OK	 
+GROUP	Login into magazine as author	1722464786338	1722464787385	951	OK
+REQUEST		GET /en	1722464787386	1722464788255	OK	 
+REQUEST	Add new article to magazine	GET /en/admin/content	1722464788256	1722464788778	OK	 
+REQUEST	Add new article to magazine	GET /en/node/add	1722464788779	1722464789020	OK	 
+REQUEST	Add new article to magazine	GET /en/node/add/article	1722464789021	1722464789542	OK	 
+REQUEST	Add new article to magazine	POST /en/node/add/article	1722464789551	1722464790511	OK	 
+REQUEST	Add new article to magazine	POST /en/media-library	1722464790517	1722464790993	OK	 
+REQUEST	Add new article to magazine	POST /en/node/add/article 2	1722464790994	1722464791172	OK	 
+REQUEST	Add new article to magazine	GET /en/entity_reference_autocomplete/taxonomy_term/default Ataxonomy_term/{taxonomy_term_id}	1722464791176	1722464791291	OK	 
+REQUEST	Add new article to magazine	GET /en/entity_reference_autocomplete/taxonomy_term/default Ataxonomy_term/{taxonomy_term_id}	1722464791292	1722464791413	OK	 
+REQUEST	Add new article to magazine	GET /en/entity_reference_autocomplete/taxonomy_term/default Ataxonomy_term/{taxonomy_term_id}	1722464791414	1722464791533	OK	 
+REQUEST	Add new article to magazine	GET /en/entity_reference_autocomplete/taxonomy_term/default Ataxonomy_term/{taxonomy_term_id}	1722464791534	1722464791652	OK	 
+REQUEST	Add new article to magazine	POST /en/node/add/article 3	1722464791654	1722464792032	OK	 
+REQUEST	Add new article to magazine	GET /en/node/{id}	1722464792033	1722464792660	OK	 
+REQUEST	Add new article to magazine	POST /en/contextual/render	1722464792662	1722464792970	OK	 
+REQUEST	Add new article to magazine	POST /en/history/{node_id}/read	1722464792971	1722464793125	OK	 
+GROUP	Add new article to magazine	1722464788255	1722464793125	4838	OK
+REQUEST	Logout	GET /en/user/logout	1722464793127	1722464793240	OK	 
+GROUP	Logout	1722464793126	1722464793241	113	OK
+REQUEST	Login into magazine as author	GET /en/user/login	1722464853352	1722464853643	OK	 
+REQUEST	Login into magazine as author	POST /en/user/login	1722464853645	1722464853854	OK	 
+REQUEST	Login into magazine as author	GET /en/user/{userId}	1722464853855	1722464854186	OK	 
+GROUP	Login into magazine as author	1722464853351	1722464854187	831	OK
+REQUEST		GET /en	1722464854187	1722464854601	OK	 
+REQUEST	Add new article to magazine	GET /en/admin/content	1722464854602	1722464855181	OK	 
+REQUEST	Add new article to magazine	GET /en/node/add	1722464855182	1722464855529	OK	 
+REQUEST	Add new article to magazine	GET /en/node/add/article	1722464855530	1722464856094	OK	 
+REQUEST	Add new article to magazine	POST /en/node/add/article	1722464856097	1722464856820	OK	 
+REQUEST	Add new article to magazine	POST /en/media-library	1722464856822	1722464857125	OK	 
+REQUEST	Add new article to magazine	POST /en/node/add/article 2	1722464857127	1722464857293	OK	 
+REQUEST	Add new article to magazine	GET /en/entity_reference_autocomplete/taxonomy_term/default Ataxonomy_term/{taxonomy_term_id}	1722464857294	1722464857400	OK	 
+REQUEST	Add new article to magazine	GET /en/entity_reference_autocomplete/taxonomy_term/default Ataxonomy_term/{taxonomy_term_id}	1722464857400	1722464857508	OK	 
+REQUEST	Add new article to magazine	GET /en/entity_reference_autocomplete/taxonomy_term/default Ataxonomy_term/{taxonomy_term_id}	1722464857509	1722464857614	OK	 
+REQUEST	Add new article to magazine	GET /en/entity_reference_autocomplete/taxonomy_term/default Ataxonomy_term/{taxonomy_term_id}	1722464857615	1722464857723	OK	 
+REQUEST	Add new article to magazine	POST /en/node/add/article 3	1722464857724	1722464858150	OK	 
+REQUEST	Add new article to magazine	GET /en/node/{id}	1722464858151	1722464858738	OK	 
+REQUEST	Add new article to magazine	POST /en/contextual/render	1722464858739	1722464858884	OK	 
+REQUEST	Add new article to magazine	POST /en/history/{node_id}/read	1722464858885	1722464858992	OK	 
+GROUP	Add new article to magazine	1722464854602	1722464858993	4374	OK
+REQUEST	Logout	GET /en/user/logout	1722464858993	1722464859102	OK	 
+GROUP	Logout	1722464858993	1722464859102	109	OK
+REQUEST	Login into magazine as author	GET /en/user/login	1722464908790	1722464908835	OK	 
+REQUEST	Login into magazine as author	POST /en/user/login	1722464908836	1722464909033	OK	 
+REQUEST	Login into magazine as author	GET /en/user/{userId}	1722464909034	1722464909331	OK	 
+GROUP	Login into magazine as author	1722464908789	1722464909331	539	OK
+REQUEST		GET /en	1722464909332	1722464909712	OK	 
+REQUEST	Add new article to magazine	GET /en/admin/content	1722464909713	1722464910157	OK	 
+REQUEST	Add new article to magazine	GET /en/node/add	1722464910158	1722464910369	OK	 
+REQUEST	Add new article to magazine	GET /en/node/add/article	1722464910369	1722464910711	OK	 
+REQUEST	Add new article to magazine	POST /en/node/add/article	1722464910713	1722464911102	OK	 
+REQUEST	Add new article to magazine	POST /en/media-library	1722464911104	1722464911388	OK	 
+REQUEST	Add new article to magazine	POST /en/node/add/article 2	1722464911389	1722464911538	OK	 
+REQUEST	Add new article to magazine	GET /en/entity_reference_autocomplete/taxonomy_term/default Ataxonomy_term/{taxonomy_term_id}	1722464911539	1722464911638	OK	 
+REQUEST	Add new article to magazine	GET /en/entity_reference_autocomplete/taxonomy_term/default Ataxonomy_term/{taxonomy_term_id}	1722464911638	1722464911741	OK	 
+REQUEST	Add new article to magazine	GET /en/entity_reference_autocomplete/taxonomy_term/default Ataxonomy_term/{taxonomy_term_id}	1722464911741	1722464911841	OK	 
+REQUEST	Add new article to magazine	GET /en/entity_reference_autocomplete/taxonomy_term/default Ataxonomy_term/{taxonomy_term_id}	1722464911842	1722464911942	OK	 
+REQUEST	Add new article to magazine	POST /en/node/add/article 3	1722464911943	1722464912214	OK	 
+REQUEST	Add new article to magazine	GET /en/node/{id}	1722464912215	1722464912664	OK	 
+REQUEST	Add new article to magazine	POST /en/contextual/render	1722464912665	1722464912803	OK	 
+REQUEST	Add new article to magazine	POST /en/history/{node_id}/read	1722464912804	1722464912905	OK	 
+GROUP	Add new article to magazine	1722464909713	1722464912906	3180	OK
+REQUEST	Logout	GET /en/user/logout	1722464912906	1722464913009	OK	 
+GROUP	Logout	1722464912906	1722464913010	103	OK
+REQUEST	Login into magazine as author	GET /en/user/login	1722464968444	1722464968495	OK	 
+REQUEST	Login into magazine as author	POST /en/user/login	1722464968496	1722464968725	OK	 
+REQUEST	Login into magazine as author	GET /en/user/{userId}	1722464968726	1722464969068	OK	 
+GROUP	Login into magazine as author	1722464968444	1722464969069	622	OK
+REQUEST		GET /en	1722464969069	1722464969435	OK	 
+REQUEST	Add new article to magazine	GET /en/admin/content	1722464969436	1722464970083	OK	 
+REQUEST	Add new article to magazine	GET /en/node/add	1722464970084	1722464970300	OK	 
+REQUEST	Add new article to magazine	GET /en/node/add/article	1722464970301	1722464970673	OK	 
+REQUEST	Add new article to magazine	POST /en/node/add/article	1722464970677	1722464971137	OK	 
+REQUEST	Add new article to magazine	POST /en/media-library	1722464971139	1722464971451	OK	 
+REQUEST	Add new article to magazine	POST /en/node/add/article 2	1722464971452	1722464971619	OK	 
+REQUEST	Add new article to magazine	GET /en/entity_reference_autocomplete/taxonomy_term/default Ataxonomy_term/{taxonomy_term_id}	1722464971620	1722464971732	OK	 
+REQUEST	Add new article to magazine	GET /en/entity_reference_autocomplete/taxonomy_term/default Ataxonomy_term/{taxonomy_term_id}	1722464971733	1722464971842	OK	 
+REQUEST	Add new article to magazine	GET /en/entity_reference_autocomplete/taxonomy_term/default Ataxonomy_term/{taxonomy_term_id}	1722464971843	1722464971950	OK	 
+REQUEST	Add new article to magazine	GET /en/entity_reference_autocomplete/taxonomy_term/default Ataxonomy_term/{taxonomy_term_id}	1722464971951	1722464972056	OK	 
+REQUEST	Add new article to magazine	POST /en/node/add/article 3	1722464972057	1722464972365	OK	 
+REQUEST	Add new article to magazine	GET /en/node/{id}	1722464972365	1722464972884	OK	 
+REQUEST	Add new article to magazine	POST /en/contextual/render	1722464972886	1722464973028	OK	 
+REQUEST	Add new article to magazine	POST /en/history/{node_id}/read	1722464973028	1722464973146	OK	 
+GROUP	Add new article to magazine	1722464969436	1722464973147	3694	OK
+REQUEST	Logout	GET /en/user/logout	1722464973148	1722464973268	OK	 
+GROUP	Logout	1722464973147	1722464973268	120	OK
+REQUEST	Login into magazine as author	GET /en/user/login	1722465032982	1722465033029	OK	 
+REQUEST	Login into magazine as author	POST /en/user/login	1722465033030	1722465033248	OK	 
+REQUEST	Login into magazine as author	GET /en/user/{userId}	1722465033249	1722465033571	OK	 
+GROUP	Login into magazine as author	1722465032981	1722465033572	587	OK
+REQUEST		GET /en	1722465033572	1722465033981	OK	 
+REQUEST	Add new article to magazine	GET /en/admin/content	1722465033982	1722465034469	OK	 
+REQUEST	Add new article to magazine	GET /en/node/add	1722465034470	1722465034706	OK	 
+REQUEST	Add new article to magazine	GET /en/node/add/article	1722465034707	1722465035076	OK	 
+REQUEST	Add new article to magazine	POST /en/node/add/article	1722465035078	1722465035510	OK	 
+REQUEST	Add new article to magazine	POST /en/media-library	1722465035511	1722465035823	OK	 
+REQUEST	Add new article to magazine	POST /en/node/add/article 2	1722465035824	1722465035987	OK	 
+REQUEST	Add new article to magazine	GET /en/entity_reference_autocomplete/taxonomy_term/default Ataxonomy_term/{taxonomy_term_id}	1722465035988	1722465036095	OK	 
+REQUEST	Add new article to magazine	GET /en/entity_reference_autocomplete/taxonomy_term/default Ataxonomy_term/{taxonomy_term_id}	1722465036096	1722465036202	OK	 
+REQUEST	Add new article to magazine	GET /en/entity_reference_autocomplete/taxonomy_term/default Ataxonomy_term/{taxonomy_term_id}	1722465036204	1722465036314	OK	 
+REQUEST	Add new article to magazine	GET /en/entity_reference_autocomplete/taxonomy_term/default Ataxonomy_term/{taxonomy_term_id}	1722465036315	1722465036420	OK	 
+REQUEST	Add new article to magazine	POST /en/node/add/article 3	1722465036420	1722465036756	OK	 
+REQUEST	Add new article to magazine	GET /en/node/{id}	1722465036756	1722465037299	OK	 
+REQUEST	Add new article to magazine	POST /en/contextual/render	1722465037300	1722465037448	OK	 
+REQUEST	Add new article to magazine	POST /en/history/{node_id}/read	1722465037449	1722465037576	OK	 
+GROUP	Add new article to magazine	1722465033981	1722465037577	3581	OK
+REQUEST	Logout	GET /en/user/logout	1722465037577	1722465037690	OK	 
+GROUP	Logout	1722465037577	1722465037690	113	OK
+REQUEST	Login into magazine as author	GET /en/user/login	1722465084411	1722465084887	OK	 
+REQUEST	Login into magazine as author	POST /en/user/login	1722465084888	1722465085189	OK	 
+REQUEST	Login into magazine as author	GET /en/user/{userId}	1722465085191	1722465085571	OK	 
+GROUP	Login into magazine as author	1722465084409	1722465085572	1157	OK
+REQUEST		GET /en	1722465085572	1722465086231	OK	 
+REQUEST	Add new article to magazine	GET /en/admin/content	1722465086232	1722465086791	OK	 
+REQUEST	Add new article to magazine	GET /en/node/add	1722465086792	1722465087016	OK	 
+REQUEST	Add new article to magazine	GET /en/node/add/article	1722465087017	1722465087385	OK	 
+REQUEST	Add new article to magazine	POST /en/node/add/article	1722465087386	1722465087816	OK	 
+REQUEST	Add new article to magazine	POST /en/media-library	1722465087818	1722465088124	OK	 
+REQUEST	Add new article to magazine	POST /en/node/add/article 2	1722465088125	1722465088285	OK	 
+REQUEST	Add new article to magazine	GET /en/entity_reference_autocomplete/taxonomy_term/default Ataxonomy_term/{taxonomy_term_id}	1722465088286	1722465088393	OK	 
+REQUEST	Add new article to magazine	GET /en/entity_reference_autocomplete/taxonomy_term/default Ataxonomy_term/{taxonomy_term_id}	1722465088395	1722465088504	OK	 
+REQUEST	Add new article to magazine	GET /en/entity_reference_autocomplete/taxonomy_term/default Ataxonomy_term/{taxonomy_term_id}	1722465088505	1722465088614	OK	 
+REQUEST	Add new article to magazine	GET /en/entity_reference_autocomplete/taxonomy_term/default Ataxonomy_term/{taxonomy_term_id}	1722465088615	1722465088725	OK	 
+REQUEST	Add new article to magazine	POST /en/node/add/article 3	1722465088726	1722465089056	OK	 
+REQUEST	Add new article to magazine	GET /en/node/{id}	1722465089057	1722465089606	OK	 
+REQUEST	Add new article to magazine	POST /en/contextual/render	1722465089607	1722465089753	OK	 
+REQUEST	Add new article to magazine	POST /en/history/{node_id}/read	1722465089754	1722465089865	OK	 
+GROUP	Add new article to magazine	1722465086232	1722465089865	3618	OK
+REQUEST	Logout	GET /en/user/logout	1722465089865	1722465089977	OK	 
+GROUP	Logout	1722465089865	1722465089978	112	OK
+REQUEST	Login into magazine as author	GET /en/user/login	1722465143333	1722465143665	OK	 
+REQUEST	Login into magazine as author	POST /en/user/login	1722465143666	1722465143900	OK	 
+REQUEST	Login into magazine as author	GET /en/user/{userId}	1722465143901	1722465144248	OK	 
+GROUP	Login into magazine as author	1722465143332	1722465144248	913	OK
+REQUEST		GET /en	1722465144249	1722465144700	OK	 
+REQUEST	Add new article to magazine	GET /en/admin/content	1722465144700	1722465145218	OK	 
+REQUEST	Add new article to magazine	GET /en/node/add	1722465145219	1722465145468	OK	 
+REQUEST	Add new article to magazine	GET /en/node/add/article	1722465145468	1722465145850	OK	 
+REQUEST	Add new article to magazine	POST /en/node/add/article	1722465145852	1722465146351	OK	 
+REQUEST	Add new article to magazine	POST /en/media-library	1722465146352	1722465146688	OK	 
+REQUEST	Add new article to magazine	POST /en/node/add/article 2	1722465146689	1722465146860	OK	 
+REQUEST	Add new article to magazine	GET /en/entity_reference_autocomplete/taxonomy_term/default Ataxonomy_term/{taxonomy_term_id}	1722465146860	1722465146971	OK	 
+REQUEST	Add new article to magazine	GET /en/entity_reference_autocomplete/taxonomy_term/default Ataxonomy_term/{taxonomy_term_id}	1722465146972	1722465147118	OK	 
+REQUEST	Add new article to magazine	GET /en/entity_reference_autocomplete/taxonomy_term/default Ataxonomy_term/{taxonomy_term_id}	1722465147119	1722465147230	OK	 
+REQUEST	Add new article to magazine	GET /en/entity_reference_autocomplete/taxonomy_term/default Ataxonomy_term/{taxonomy_term_id}	1722465147231	1722465147340	OK	 
+REQUEST	Add new article to magazine	POST /en/node/add/article 3	1722465147341	1722465147633	OK	 
+REQUEST	Add new article to magazine	GET /en/node/{id}	1722465147633	1722465148274	OK	 
+REQUEST	Add new article to magazine	POST /en/contextual/render	1722465148275	1722465148466	OK	 
+REQUEST	Add new article to magazine	POST /en/history/{node_id}/read	1722465148467	1722465148600	OK	 
+GROUP	Add new article to magazine	1722465144700	1722465148600	3889	OK
+REQUEST	Logout	GET /en/user/logout	1722465148601	1722465148722	OK	 
+GROUP	Logout	1722465148600	1722465148722	121	OK
+REQUEST	Login into magazine as author	GET /en/user/login	1722465209142	1722465209221	OK	 
+REQUEST	Login into magazine as author	POST /en/user/login	1722465209222	1722465209566	OK	 
+REQUEST	Login into magazine as author	GET /en/user/{userId}	1722465209568	1722465210264	OK	 
+GROUP	Login into magazine as author	1722465209142	1722465210265	1119	OK
+REQUEST		GET /en	1722465210266	1722465211204	OK	 
+REQUEST	Add new article to magazine	GET /en/admin/content	1722465211205	1722465212349	OK	 
+REQUEST	Add new article to magazine	GET /en/node/add	1722465212352	1722465212767	OK	 
+REQUEST	Add new article to magazine	GET /en/node/add/article	1722465212768	1722465213585	OK	 
+REQUEST	Add new article to magazine	POST /en/node/add/article	1722465213589	1722465214433	OK	 
+REQUEST	Add new article to magazine	POST /en/media-library	1722465214435	1722465215057	OK	 
+REQUEST	Add new article to magazine	POST /en/node/add/article 2	1722465215058	1722465215373	OK	 
+REQUEST	Add new article to magazine	GET /en/entity_reference_autocomplete/taxonomy_term/default Ataxonomy_term/{taxonomy_term_id}	1722465215378	1722465215562	OK	 
+REQUEST	Add new article to magazine	GET /en/entity_reference_autocomplete/taxonomy_term/default Ataxonomy_term/{taxonomy_term_id}	1722465215563	1722465215768	OK	 
+REQUEST	Add new article to magazine	GET /en/entity_reference_autocomplete/taxonomy_term/default Ataxonomy_term/{taxonomy_term_id}	1722465215769	1722465215965	OK	 
+REQUEST	Add new article to magazine	GET /en/entity_reference_autocomplete/taxonomy_term/default Ataxonomy_term/{taxonomy_term_id}	1722465215967	1722465216157	OK	 
+REQUEST	Add new article to magazine	POST /en/node/add/article 3	1722465216158	1722465216757	OK	 
+REQUEST	Add new article to magazine	GET /en/node/{id}	1722465216759	1722465217868	OK	 
+REQUEST	Add new article to magazine	POST /en/contextual/render	1722465217870	1722465218139	OK	 
+REQUEST	Add new article to magazine	POST /en/history/{node_id}/read	1722465218140	1722465218336	OK	 
+GROUP	Add new article to magazine	1722465211204	1722465218337	7105	OK
+REQUEST	Logout	GET /en/user/logout	1722465218338	1722465218561	OK	 
+GROUP	Logout	1722465218337	1722465218562	223	OK
+REQUEST	Login into magazine as author	GET /en/user/login	1722465270579	1722465270626	OK	 
+REQUEST	Login into magazine as author	POST /en/user/login	1722465270627	1722465270849	OK	 
+REQUEST	Login into magazine as author	GET /en/user/{userId}	1722465270849	1722465271172	OK	 
+GROUP	Login into magazine as author	1722465270578	1722465271173	592	OK
+REQUEST		GET /en	1722465271173	1722465271596	OK	 
+REQUEST	Add new article to magazine	GET /en/admin/content	1722465271598	1722465272110	OK	 
+REQUEST	Add new article to magazine	GET /en/node/add	1722465272110	1722465272335	OK	 
+REQUEST	Add new article to magazine	GET /en/node/add/article	1722465272336	1722465272705	OK	 
+REQUEST	Add new article to magazine	POST /en/node/add/article	1722465272707	1722465273137	OK	 
+REQUEST	Add new article to magazine	POST /en/media-library	1722465273139	1722465273449	OK	 
+REQUEST	Add new article to magazine	POST /en/node/add/article 2	1722465273450	1722465273610	OK	 
+REQUEST	Add new article to magazine	GET /en/entity_reference_autocomplete/taxonomy_term/default Ataxonomy_term/{taxonomy_term_id}	1722465273611	1722465273720	OK	 
+REQUEST	Add new article to magazine	GET /en/entity_reference_autocomplete/taxonomy_term/default Ataxonomy_term/{taxonomy_term_id}	1722465273721	1722465273827	OK	 
+REQUEST	Add new article to magazine	GET /en/entity_reference_autocomplete/taxonomy_term/default Ataxonomy_term/{taxonomy_term_id}	1722465273828	1722465273937	OK	 
+REQUEST	Add new article to magazine	GET /en/entity_reference_autocomplete/taxonomy_term/default Ataxonomy_term/{taxonomy_term_id}	1722465273937	1722465274044	OK	 
+REQUEST	Add new article to magazine	POST /en/node/add/article 3	1722465274045	1722465274352	OK	 
+REQUEST	Add new article to magazine	GET /en/node/{id}	1722465274353	1722465274857	OK	 
+REQUEST	Add new article to magazine	POST /en/contextual/render	1722465274858	1722465275004	OK	 
+REQUEST	Add new article to magazine	POST /en/history/{node_id}/read	1722465275004	1722465275116	OK	 
+GROUP	Add new article to magazine	1722465271597	1722465275116	3506	OK
+REQUEST	Logout	GET /en/user/logout	1722465275117	1722465275228	OK	 
+GROUP	Logout	1722465275116	1722465275228	111	OK
+REQUEST	Login into magazine as author	GET /en/user/login	1722465320939	1722465320985	OK	 
+REQUEST	Login into magazine as author	POST /en/user/login	1722465320986	1722465321195	OK	 
+REQUEST	Login into magazine as author	GET /en/user/{userId}	1722465321195	1722465321516	OK	 
+GROUP	Login into magazine as author	1722465320939	1722465321516	576	OK
+REQUEST		GET /en	1722465321516	1722465321940	OK	 
+REQUEST	Add new article to magazine	GET /en/admin/content	1722465321940	1722465322428	OK	 
+REQUEST	Add new article to magazine	GET /en/node/add	1722465322428	1722465322656	OK	 
+REQUEST	Add new article to magazine	GET /en/node/add/article	1722465322658	1722465323026	OK	 
+REQUEST	Add new article to magazine	POST /en/node/add/article	1722465323028	1722465323464	OK	 
+REQUEST	Add new article to magazine	POST /en/media-library	1722465323466	1722465323799	OK	 
+REQUEST	Add new article to magazine	POST /en/node/add/article 2	1722465323801	1722465323971	OK	 
+REQUEST	Add new article to magazine	GET /en/entity_reference_autocomplete/taxonomy_term/default Ataxonomy_term/{taxonomy_term_id}	1722465323972	1722465324078	OK	 
+REQUEST	Add new article to magazine	GET /en/entity_reference_autocomplete/taxonomy_term/default Ataxonomy_term/{taxonomy_term_id}	1722465324078	1722465324187	OK	 
+REQUEST	Add new article to magazine	GET /en/entity_reference_autocomplete/taxonomy_term/default Ataxonomy_term/{taxonomy_term_id}	1722465324188	1722465324296	OK	 
+REQUEST	Add new article to magazine	GET /en/entity_reference_autocomplete/taxonomy_term/default Ataxonomy_term/{taxonomy_term_id}	1722465324297	1722465324402	OK	 
+REQUEST	Add new article to magazine	POST /en/node/add/article 3	1722465324403	1722465324703	OK	 
+REQUEST	Add new article to magazine	GET /en/node/{id}	1722465324703	1722465325199	OK	 
+REQUEST	Add new article to magazine	POST /en/contextual/render	1722465325200	1722465325347	OK	 
+REQUEST	Add new article to magazine	POST /en/history/{node_id}/read	1722465325348	1722465325468	OK	 
+GROUP	Add new article to magazine	1722465321940	1722465325468	3514	OK
+REQUEST	Logout	GET /en/user/logout	1722465325469	1722465325589	OK	 
+GROUP	Logout	1722465325469	1722465325590	120	OK

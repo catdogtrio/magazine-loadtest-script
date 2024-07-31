@@ -1,17 +1,16 @@
 package simulations
 
-import utils.Parameters.{baseUrl, testDuration}
-import utils.UsersGeneration.generate
-import io.gatling.core.Predef.{Simulation, constantConcurrentUsers, rampConcurrentUsers}
+import io.gatling.core.Predef._
 import io.gatling.http.Predef.http
 import io.gatling.http.protocol._
-import io.gatling.core.Predef._
 import scenarios.RegressScenario.regressScenario
+import utils.Parameters.baseUrl
+import utils.UsersGeneration.generate
 
 import scala.concurrent.duration.DurationInt
 
 /** Represents a simulation of loadtest */
-class RegressSimulation extends Simulation {
+class ReliabilitySimulation extends Simulation {
 
   val httpProtocol: HttpProtocolBuilder = http
     .baseUrl(baseUrl)
@@ -22,14 +21,14 @@ class RegressSimulation extends Simulation {
     .disableFollowRedirect
 
   before {
-    println("Going to run regress-scenario")
+    println("Going to run ReliabilitySimulation")
     generate()
   }
 
   setUp(
-    regressScenario(50,70, 10.minutes).inject(
-      constantConcurrentUsers(1) during(10.minutes),
+    regressScenario(50,70, 24.hours).inject(
+      constantConcurrentUsers(1) during(24.hours),
     ).protocols(httpProtocol),
-  ).maxDuration(10.minutes)
+  ).maxDuration(24.hours)
 
 }

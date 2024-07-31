@@ -29,7 +29,7 @@ To run a simulation, choose a simulation name and set it in the `-Dgatling.simul
 
 to run **regress** simulation:
 ```bash
-mvn gatling:test -Dgatling.simulationClass=simulations.RegressSimulation
+mvn gatling:test -Dgatling.simulationClass=simulations.LoadtestSimulation
 ```
 to run **debug** simulation:
 ```bash
