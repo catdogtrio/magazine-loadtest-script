@@ -4,6 +4,7 @@ import io.gatling.core.Predef._
 import io.gatling.http.Predef._
 import io.gatling.http.request.builder.HttpRequestBuilder
 
+/** Represents requests for creating new article */
 object MagazineContentApiRequests {
 
   val getEnAdminContent: HttpRequestBuilder = http("GET /en/admin/content")
@@ -118,11 +119,11 @@ object MagazineContentApiRequests {
     .formParam("ajax_page_state[libraries]", "${libraries}")
 
 
-  val getEnEntityReferenceAutocompleteTaxonomyTermDefaultAtaxonomyTermFormId: HttpRequestBuilder = http("GET /en/entity_reference_autocomplete/taxonomy_term/default Ataxonomy_term/{form_id}")
+  val getEnEntityReferenceAutocompleteTaxonomyTermDefaultAtaxonomyTermFormId: HttpRequestBuilder = http("GET /en/entity_reference_autocomplete/taxonomy_term/default Ataxonomy_term/{taxonomy_term_id}")
     .get("/en/entity_reference_autocomplete/taxonomy_term/default%3Ataxonomy_term/${taxonomy_term_id}")
-    .queryParam("q","f")
+    .queryParam("q","${letter}")
     .check(status.is(200))
-    .check(jsonPath("$[*].value").findRandom.saveAs("tag_value"))
+    .check(jsonPath("$[*].value").findRandom.optional.saveAs("tag_value"))
 
 
   val postEnNodeAddArticle3: HttpRequestBuilder = http("POST /en/node/add/article 3")

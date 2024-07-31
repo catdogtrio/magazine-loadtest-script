@@ -1,6 +1,6 @@
 package scenarios.content
 
-import configs.Utils.{dateTimeCurrentFormatted, generateNumber, getCurrentTimestamp}
+import configs.Utils.{dateTimeCurrentFormatted, generateNumber, getCurrentTimestamp, getRandomLetters}
 import io.gatling.core.Predef._
 import io.gatling.core.structure.ScenarioBuilder
 import requests.MagazineApiRequests._
@@ -15,23 +15,13 @@ object AddContentScenario {
     .exec(getEnNodeAddArticle)
 
     .exec(session => session.set("article_name", dateTimeCurrentFormatted("yyyy-MM-dd")+' '+generateNumber(8)))
-
-
-
-
+    .exec(session => session.set("tag_value", "tag_"+getRandomLetters(6)))
 
     .exec(session => session.set("timestamp", getCurrentTimestamp))
     .exec(session => session.set("date", dateTimeCurrentFormatted("yyyy-MM-dd")))
     .exec(session => session.set("time", dateTimeCurrentFormatted("HH:mm:ss")))
 
     .exec(postEnNodeAddArticle1)
-//    .exec(session => {
-//      val new_form_token = session("new_form_token").as[String]
-//      println(s"new_form_token: $new_form_token")
-//      session
-//    })
-
-
     .exec(postEnMediaLibrary)
 
     .exec(session => session.set("timestamp", getCurrentTimestamp))
@@ -41,7 +31,10 @@ object AddContentScenario {
 
 
     // tag searching
-    .exec(getEnEntityReferenceAutocompleteTaxonomyTermDefaultAtaxonomyTermFormId)
+    .repeat(5){
+      exec(session => session.set("letter", getRandomLetters(1)))
+        .exec(getEnEntityReferenceAutocompleteTaxonomyTermDefaultAtaxonomyTermFormId)
+    }
 
 
     .exec(postEnNodeAddArticle3)

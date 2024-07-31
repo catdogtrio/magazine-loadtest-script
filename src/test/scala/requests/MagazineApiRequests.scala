@@ -4,6 +4,7 @@ import io.gatling.core.Predef._
 import io.gatling.http.Predef._
 import io.gatling.http.request.builder.HttpRequestBuilder
 
+/** Represents login requests */
 object MagazineApiRequests {
 
   val getEn: HttpRequestBuilder = http("GET /en")
@@ -15,11 +16,6 @@ object MagazineApiRequests {
     .check(status.is(200))
     .check(regex("name=\"form_build_id\" value=\"(.*)\" \\/>").ofType[String].saveAs("form_build_id"))
 
-
-  val getEnUserUserId: HttpRequestBuilder = http("GET /en/user/{userId}")
-    .get("/en/user/1?check_logged_in=1")
-    .check(status.is(200))
-
   val postEnUserLogin: HttpRequestBuilder = http("POST /en/user/login")
     .post("/en/user/login")
     .header("Content-Type", "application/x-www-form-urlencoded")
@@ -29,6 +25,10 @@ object MagazineApiRequests {
     .formParam("op","Log in")
     .formParam("form_build_id","${form_build_id}")
     .check(status.is(303))
-    .check(bodyString.saveAs("BODY"))
+    .check(header("Location").saveAs("location"))
+
+  val getEnUserUserId: HttpRequestBuilder = http("GET /en/user/{userId}")
+    .get("${location}")
+    .check(status.is(200).saveAs("login_status_code"))
 
 }

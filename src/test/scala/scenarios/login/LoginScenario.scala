@@ -7,7 +7,7 @@ import requests.MagazineApiRequests._
 object LoginScenario {
   private val users = csv("users.csv").random
 
-  var LoginScenario: ScenarioBuilder = scenario("login-scenario")
+  var LoginScenario: ScenarioBuilder = scenario("LoginScenario")
     .feed(users)
     .exec(getEnUserLogin)
     .exec(postEnUserLogin)
