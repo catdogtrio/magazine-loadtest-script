@@ -1,11 +1,14 @@
 package scenarios.login
 
+import configs.Parameters.{sqlUsers, userDb}
 import io.gatling.core.Predef._
+import io.gatling.core.feeder.FeederBuilderBase
 import io.gatling.core.structure.ScenarioBuilder
+import io.gatling.jdbc.Predef.jdbcFeeder
 import requests.MagazineApiRequests._
 
 object LoginScenario {
-  private val users = csv("users.csv").random
+  private val users: FeederBuilderBase[Any]#F = jdbcFeeder(userDb._1, userDb._2, userDb._3, sqlUsers).random
 
   var LoginScenario: ScenarioBuilder = scenario("LoginScenario")
     .feed(users)

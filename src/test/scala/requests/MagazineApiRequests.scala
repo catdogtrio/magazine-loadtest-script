@@ -1,5 +1,6 @@
 package requests
 
+import configs.Parameters.defaultPassword
 import io.gatling.core.Predef._
 import io.gatling.http.Predef._
 import io.gatling.http.request.builder.HttpRequestBuilder
@@ -19,11 +20,11 @@ object MagazineApiRequests {
   val postEnUserLogin: HttpRequestBuilder = http("POST /en/user/login")
     .post("/en/user/login")
     .header("Content-Type", "application/x-www-form-urlencoded")
-    .formParam("name","${login}")
-    .formParam("pass","${password}")
-    .formParam("form_id","user_login_form")
-    .formParam("op","Log in")
-    .formParam("form_build_id","${form_build_id}")
+    .formParam("name", "${login}")
+    .formParam("pass", defaultPassword)
+    .formParam("form_id", "user_login_form")
+    .formParam("op", "Log in")
+    .formParam("form_build_id", "${form_build_id}")
     .check(status.is(303))
     .check(header("Location").saveAs("location"))
 

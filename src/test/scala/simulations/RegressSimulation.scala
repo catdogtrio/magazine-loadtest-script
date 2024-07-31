@@ -1,6 +1,7 @@
 package simulations
 
 import configs.Parameters.baseUrl
+import configs.UsersGeneration.generate
 import io.gatling.core.Predef.{Simulation, constantConcurrentUsers, rampConcurrentUsers}
 import io.gatling.http.Predef.http
 import io.gatling.http.protocol._
@@ -22,6 +23,7 @@ class RegressSimulation extends Simulation {
 
   before {
     println("Going to run regress-scenario")
+    generate()
   }
 
   setUp(
