@@ -4,6 +4,13 @@
 
 This is a gatling load test script for a magazine website.
 
+
+## requirements
+- Java version: 15.0.2 or above
+- maven: 3.8.1 or above
+- scala: 2.13.4
+
+
 ## structure
 
 The project is organized into several folders, each divided by type:
