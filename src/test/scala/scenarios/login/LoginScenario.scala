@@ -8,10 +8,8 @@ import io.gatling.jdbc.Predef.jdbcFeeder
 import requests.MagazineAuthRequests._
 
 object LoginScenario {
-  private val users: FeederBuilderBase[Any]#F = jdbcFeeder(userDb._1, userDb._2, userDb._3, sqlUsers).random
 
   var LoginScenario: ScenarioBuilder = scenario("LoginScenario")
-    .feed(users)
     .group("Login into magazine as author"){
       exec(getEnUserLogin)
         .exec(postEnUserLogin)

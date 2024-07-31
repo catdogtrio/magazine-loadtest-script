@@ -13,6 +13,6 @@ object Parameters {
     "org.postgresql.Driver")
 
   val sqlUsers: String = "select name as login from public.users_field_data where pass='$2y$10$mxM8PMebElmcFQh2o/k4aOwR.anqPRgbySnaUpLIQWH8.smhYXjka' order by random()"
-  val sqlTags: String = "select concat(name,' ','(',tid ,')') as tag  from public.taxonomy_term_field_data where vid='tags' order by random()"
+  val sqlTags: String = "select concat(name,' ','(',tid ,')') as tag_value from public.taxonomy_term_field_data where vid='tags' order by random()"
 
 }

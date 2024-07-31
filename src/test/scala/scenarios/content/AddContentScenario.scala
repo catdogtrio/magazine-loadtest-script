@@ -10,14 +10,12 @@ import requests.MagazineContentApiRequests._
 
 object AddContentScenario {
 
-  private val tags: FeederBuilderBase[Any]#F = jdbcFeeder(userDb._1, userDb._2, userDb._3, sqlTags).random
 
   var AddArticleScenario: ScenarioBuilder = scenario("login-scenario")
 
     .exitBlockOnFail(
       group("Add new article to magazine"){
-        feed(tags)
-          .exec(getEnAdminContent)
+        exec(getEnAdminContent)
           .exec(getEnNodeAdd)
           .exec(getEnNodeAddArticle)
 
@@ -41,12 +39,13 @@ object AddContentScenario {
             exec(session => session.set("letter", getRandomLetters(1)))
               .exec(getEnEntityReferenceAutocompleteTaxonomyTermDefaultAtaxonomyTermFormId)
           }
-          // %10 - create new tag, 90% - use tag from selected
+
+
+
+          // %10 - create new tag
           .randomSwitch(
             10.0 -> exec(session => session.set("tag_value", "tag_" + getRandomLetters(6))),
-            90.0 -> exec(session => session.set("tag_value", "${tag}"))
           )
-          .exec(getEnEntityReferenceAutocompleteTaxonomyTermDefaultAtaxonomyTermFormId)
 
 
           .exec(postEnNodeAddArticle3)

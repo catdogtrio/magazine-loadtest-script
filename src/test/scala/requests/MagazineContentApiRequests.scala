@@ -123,7 +123,7 @@ object MagazineContentApiRequests {
     .get("/en/entity_reference_autocomplete/taxonomy_term/default%3Ataxonomy_term/${taxonomy_term_id}")
     .queryParam("q", "${letter}")
     .check(status.is(200))
-    .check(jsonPath("$[*].value").findRandom.optional.saveAs("tag_value"))
+//    .check(jsonPath("$[*].value").findRandom.optional.saveAs("tag_value"))
 
 
   val postEnNodeAddArticle3: HttpRequestBuilder = http("POST /en/node/add/article 3")
