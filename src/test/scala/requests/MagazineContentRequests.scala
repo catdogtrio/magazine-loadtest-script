@@ -5,7 +5,11 @@ import io.gatling.http.Predef._
 import io.gatling.http.request.builder.HttpRequestBuilder
 
 /** Represents requests for creating new article */
-object MagazineContentApiRequests {
+object MagazineContentRequests {
+
+  val getEn: HttpRequestBuilder = http("GET /en")
+    .get("/en")
+    .check(status.is(200))
 
   val getEnAdminContent: HttpRequestBuilder = http("GET /en/admin/content")
     .get("/en/admin/content")

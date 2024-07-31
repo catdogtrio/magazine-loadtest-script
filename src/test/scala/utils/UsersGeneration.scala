@@ -1,6 +1,6 @@
-package configs
+package utils
 
-import configs.Parameters.userDb
+import utils.Parameters.userDb
 
 import java.sql.{DriverManager, ResultSet}
 import scala.io.Source

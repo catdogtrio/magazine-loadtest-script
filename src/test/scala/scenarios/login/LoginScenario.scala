@@ -1,11 +1,11 @@
 package scenarios.login
 
-import configs.Parameters.{sqlUsers, userDb}
+import utils.Parameters.{sqlUsers, userDb}
 import io.gatling.core.Predef._
 import io.gatling.core.feeder.FeederBuilderBase
 import io.gatling.core.structure.ScenarioBuilder
 import io.gatling.jdbc.Predef.jdbcFeeder
-import requests.MagazineAuthRequests._
+import requests.MagazineUserRequests._
 
 object LoginScenario {
 

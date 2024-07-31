@@ -1,16 +1,13 @@
 package requests
 
-import configs.Parameters.defaultPassword
+import utils.Parameters.defaultPassword
 import io.gatling.core.Predef._
 import io.gatling.http.Predef._
 import io.gatling.http.request.builder.HttpRequestBuilder
 
 /** Represents login requests */
-object MagazineAuthRequests {
+object MagazineUserRequests {
 
-  val getEn: HttpRequestBuilder = http("GET /en")
-    .get("/en")
-    .check(status.is(200))
 
   val getEnUserLogin: HttpRequestBuilder = http("GET /en/user/login")
     .get("/en/user/login")

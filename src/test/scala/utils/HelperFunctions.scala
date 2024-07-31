@@ -1,12 +1,12 @@
-package configs
+package utils
 
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import scala.util.Random
 
 
-/** Usefull functions that are used in scenario */
-object Utils {
+/** Useful functions that are used in scenario */
+object HelperFunctions {
 
   /**
    * Return current time data in format

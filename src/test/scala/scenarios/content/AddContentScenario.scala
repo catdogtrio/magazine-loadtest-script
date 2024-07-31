@@ -1,12 +1,12 @@
 package scenarios.content
 
-import configs.Parameters.{sqlTags, userDb}
-import configs.Utils.{dateTimeCurrentFormatted, generateNumber, getCurrentTimestamp, getRandomLetters}
+import utils.Parameters.{sqlTags, userDb}
+import utils.HelperFunctions.{dateTimeCurrentFormatted, generateNumber, getCurrentTimestamp, getRandomLetters}
 import io.gatling.core.Predef._
 import io.gatling.core.feeder.FeederBuilderBase
 import io.gatling.core.structure.ScenarioBuilder
 import io.gatling.jdbc.Predef.jdbcFeeder
-import requests.MagazineContentApiRequests._
+import requests.MagazineContentRequests._
 
 object AddContentScenario {
 

@@ -1,12 +1,12 @@
 package simulations
 
-import configs.Parameters.baseUrl
-import configs.UsersGeneration.generate
+import utils.Parameters.{baseUrl, testDuration}
+import utils.UsersGeneration.generate
 import io.gatling.core.Predef.{Simulation, constantConcurrentUsers, rampConcurrentUsers}
 import io.gatling.http.Predef.http
 import io.gatling.http.protocol._
 import io.gatling.core.Predef._
-import scenarios.RegressScenario.RegressScenario
+import scenarios.RegressScenario.regressScenario
 
 import scala.concurrent.duration.DurationInt
 
@@ -27,8 +27,8 @@ class RegressSimulation extends Simulation {
   }
 
   setUp(
-    RegressScenario.inject(
-      constantUsersPerSec(1/60) during(10.minutes),
+    regressScenario(50,70, 10.minutes).inject(
+      constantConcurrentUsers(1) during(10.minutes),
     ).protocols(httpProtocol),
   ).maxDuration(10.minutes)
 

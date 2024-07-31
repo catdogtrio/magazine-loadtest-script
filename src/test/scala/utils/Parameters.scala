@@ -1,4 +1,6 @@
-package configs
+package utils
+
+import scala.concurrent.duration.{DurationInt, FiniteDuration}
 
 
 /** Static parameters */
