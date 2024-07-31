@@ -11,3 +11,4 @@ project/plugins/project/
 .m2/
 *.class
 #*.log
+.DS_Store
